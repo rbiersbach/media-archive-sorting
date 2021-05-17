@@ -1,5 +1,7 @@
-import org.junit.Test
+package de.rbiersbach.mas
+
 import org.junit.Assert.*
+import org.junit.Test
 
 class Test1:
   @Test def t1(): Unit = 
