@@ -1,7 +1,10 @@
 package de.rbiersbach.mas
+import scala.collection.JavaConverters._
+import de.rbiersbach.mas.adapters.files.NioFileStreamAdapter
+import de.rbiersbach.mas.adapters.files.Path
 
 @main def hello: Unit =
-  println("Hello world!")
-  println(msg)
+  val fileStreamAdapter = NioFileStreamAdapter
 
-def msg = "I was compiled by Scala 3. :)"
+  fileStreamAdapter.streamResourcesDepthSearch(Path(List(""))).foreach(println)
+
